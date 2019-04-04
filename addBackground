@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>Document</title>
+	<style>
+		body {
+			clear: both;
+		}
+
+		div {
+			text-align: center;
+			width: 600px;
+			
+		}
+		div:first-child div { /* Всички див елементи (div) който са деца на див елементи който на свой ред са първи деца на родителите си (div:first-child)*/
+			border: 10px solid black;
+			background-size: contain;
+			border-image: url('border.png') 40 round;
+			box-shadow: 3px 3px 5px lightgrey;
+			border-radius: 5px;
+			padding: 10px;
+			margin-bottom: 10px;
+		}
+
+		h3 {
+			color: white;
+			text-shadow: 2px 2px 3px red;
+		}
+
+		h3:first-letter { /* Първата буква в h3*/
+			color: yellow;
+			font-size: 20px;
+			font-weight: bold;
+		}
+
+		h3::first-line { /* Първия ред от h3*/
+			font-style: italic;
+		}
+
+		h3::after { /* Добавяне на елемент с края на h3*/ 
+			content: "... Something ...";
+			color: blue;
+		}
+
+		input[type="button"] { /* Всички input тип бутон */
+			cursor: pointer;
+		}
+
+		input:first-of-type { /* Първия елемент input*/
+			float: left;
+		}
+
+		input:last-of-type { /* Последния елемент input */
+			float: right;
+		
+		}
+		
+	</style>
+</head>
+<body>
+	<div >
+
+		<div id="rabotnoMqsto">
+			<h3>
+				Lorem ipsum dolor sit amet,Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, sunt consequuntur incidunt repellendus esse error, sed ea facilis assumenda. 
+			</h3>
+		</div> <!-- End of #rabotnoMqsto (при по-дълъг код се чете по-лесно) -->
+
+		<input type="button" onclick="changeBackground(-1);" value="Previous" /> <!-- Извикване на предишна снимка-->
+		<input type="button" onclick="addBackground();" value="Add image" /> <!-- Добавяне на нова снимка-->
+		<input type="button" onclick="changeBackground(1);" value="Next" /> <!-- Извикване на следваща снимка -->
+	
+	</div>
+
+	<script>
+		var doc = document, 
+			rabotnoMqsto = doc.getElementById('rabotnoMqsto'),
+			backgroundArray = ['Cool-Wallpaper-247.jpg','cool-wallpapers-12.jpg','iphone-wallpaper-cool-UA.jpg','jOCMeVO.jpg'],
+			indexBackground = 0,
+			userImage;
+
+
+			if(localStorage.indexBack) { // Проверка и зареждане на индекса на текущия бакграунд от локал сторидж
+				indexBackground = parseInt(localStorage.indexBack);
+				// console.log('index:' + indexBackground);
+			}
+
+			if(localStorage.arrayBack) { // Проверка и зареждане на масива с бакграунд снимки
+				backgroundArray = localStorage.arrayBack.split(",");
+			}
+
+			changeBackground(0); // показваме текущата снимка
+
+
+		function changeBackground(step) {
+			if (step != 0) { // ако е зададена някаква стъпка на функцията добавя стъпката (ако е -1 вади)
+				indexBackground += step;
+			}
+
+			if(indexBackground < 0) { //проверки за 'превъртане' на ключа на масива
+				indexBackground = backgroundArray.length - 1;
+			} else if(indexBackground >= backgroundArray.length) {
+				indexBackground = 0;
+			}
+			// console.log(indexBackground);
+			rabotnoMqsto.style.backgroundImage = 'url(' + backgroundArray[indexBackground] + ')';
+			localStorage.setItem('indexBack', indexBackground); // Запазване на индекса в локалсторидж - TO DO валидация за последния
+		}
+
+		function addBackground() { // Добавяне на нова снимка
+			userImage = prompt('Enter url of your image','');
+			if(userImage != '' && userImage != null) { // Проверка за изпращане на празен низ или Cancel на confirm диалога
+				backgroundArray.push(userImage);
+				localStorage.setItem('arrayBack', backgroundArray.toString()); // Запазване на сериализиран масив - TO DO валидация за локалсторидж
+			}else {
+				alert('Wrong URL');
+			}
+		}
+
+	</script>
+</body>
+</html>
