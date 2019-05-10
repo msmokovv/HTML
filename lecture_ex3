@@ -1,0 +1,189 @@
+<html>
+	<head>
+		<meta charset = "UTF-8" />
+		<title>Lekciy3</title>	
+	</head>
+	<body>
+		<table bgcolor="black" width="100%" border="1" cellpadding="10" cellspacing="10">
+			<colgroup>
+				<col span="2" bgcolor="red" />
+				<col span="1" bgcolor="yellow" />
+				<col span="1" bgcolor="green" />
+				<col span="2" bgcolor="cyan" />
+			</colgroup>
+			<tr>
+				<th>1</th>
+				<th>&nbsp;</th>
+				<th>3</th>
+				<th>&nbsp;</th>
+				<th>5</th>
+				<th>&nbsp;</th>
+				
+			</tr>	
+			<tr>
+				<td bgcolor="blue" colspan="6" align="center">This cell is blue.</td>
+			</tr>
+			<tr>
+				<td colspan="3" align="left">left cell</td>
+				<td colspan="3" align="right">right cell</td>
+			</tr>			
+		</table>
+		<br />
+		<table width="500" height="500" border="5">
+			<tr>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+			</tr>
+			<tr>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+				<td bgcolor="black">&nbsp;</td>
+				<td bgcolor="white">&nbsp;</td>
+			</tr>
+		</table>
+		<br />
+		<br />
+		<br />
+		<table width="100%" height="300" border="1" bgcolor="pink">
+			<tr>
+				<td width="500" align="center"><img src="http://bloggood.ru/wp-content/uploads/2013/05/kartinka-dla-bloga-4.jpg" alt="pic1"></td>
+				<td align="center">
+					<table border="3" width="100%" height="100%">
+						<tr height="25">
+							<td>
+								<table border="0" width="100%" cellspacing="0">
+									<tr><td bgcolor="white">&nbsp;</td></tr>
+									<tr><td bgcolor="green">&nbsp;</td></tr>
+									<tr><td bgcolor="red">&nbsp;</td></tr>													
+								</table>							
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Na koi diskoteki shte hodim?
+								<ol type="I">
+									<li>Gosti
+										<ol start="0"> 
+											<li>Dancho</li>
+											<li>Gancho</li>
+											<li>Nikolay</li>
+										</ol>
+									</li>
+									<li>Piene
+										<ul type="square">
+											<li>vodka</li>
+											<li>tequilla</li>
+											<li>whiskey</li>
+										</ul>
+									</li>
+									<li>Pushene</li>
+								</ol>
+							</td>
+						</tr>
+					</table>
+				</td>
+				<td width="500" align="center"><img width="500" src="https://pbs.twimg.com/media/CftsRAvW4AAX8Q-.jpg" alt="pic2"></td>
+			</tr>
+		</table>
+		<br /><br /><br />
+		<table width="100%" border="1">
+			<tr>
+				<td height="40">
+					<a target="iframe_a" href="https://webacademy.bg">
+						<img src="http://webacademy.bg/wa_logo.png" alt="wa">					
+					</a>
+					<a target="iframe_a" href="https://www.google.bg/" >
+						<img height="40" src="https://i.kinja-img.com/gawker-media/image/upload/s--pEKSmwzm--/c_scale,fl_progressive,q_80,w_800/1414228815325188681.jpg" alt="google_logo" />
+					<a target="iframe_a" href="https://www.vbox7.com/" >
+						<img src="https://i49.vbox7.com/design/mobile3/logo.svg" alt="vbox" height="40">
+					</a>
+				</td>
+				<td width="400" valign="middle" rowspan="2">
+					<img src="http://lorempixel.com/400/200/sports" alt="sport" title="lorempixel" />
+				</td>
+
+			</tr>	
+			<tr height="200">
+				<td>
+					<iframe name="iframe_a" src="iframe.html" width="100%" scrolling="auto" frameborder="10"></iframe>				
+				</td>
+			</tr>
+			<tr>
+				<td align="right" colspan="2">
+					<a target="iframe_a" href="https://webacademy.bg" >&copy; Webacademy &reg;</a>				
+				</td>			
+			</tr>
+		</table>
+		
+	</body>
+</html>
