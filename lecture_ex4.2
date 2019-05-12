@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Lecture 4</title>
+	</head>
+	<body>
+		<table border="1">
+			<tr>
+				<td>
+					<form method="get" action="http://EnevSoft.net/echo.php" target="result_frame">
+						<table border="1" cellpadding="10">
+							<tr>
+								<th colspan="2">Search</th>
+							</tr>
+							<tr>
+								<td><label for="book_name">Book name</label></td>
+								<td>
+									<input type="text" name="book_name" id="book_name" placeholder="book name" maxlength="20" required="required" />
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<label for="hard">Hard</label>
+									<input type="radio" name="korica" id="hard" value="Hard" />
+									<label for="soft">Soft</label>
+									<input type="radio" name="korica" id="soft" value="Soft" />
+								</td>
+							</tr>
+							<tr>
+								<td>
+									<label for="author">Author</label>
+								</td>
+								<td>
+									<select name="author" >
+										<optgroup label="bulgarian authors">
+											<option value="iv">Ivan Vazov</option>
+											<option value="hb">Hristo Botev</option>
+											<option value="gm">Geo Milev</option>
+										</optgroup>
+										<optgroup label="foreign authors">
+											<option value="t">Tolkin</option>
+											<option value="ak">Agata Kristi</option>
+										</optgroup>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<label>drama
+									<input value="drama" type="checkbox" name="genre[drama]" checked="checked" />
+									</label>
+									<label>action
+									<input value="action" type="checkbox" name="genre[action]" />
+									</label>
+									<label>comedy
+									<input value="comedy" type="checkbox" name="genre[comedy]" />
+									</label>
+									<label>thiller
+									<input value="thiller" type="checkbox" name="genre[thiller]" />
+									</label>
+								</td>
+							</tr>
+							<tr>
+								<td colspan="2">
+									<input type="submit" name="submit" value="Submit" />
+									<input type="reset" name="reset" value="Reset" />
+								</td>
+							</tr>
+						</table>
+					</form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<form></form>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<iframe src="http://EnevSoft.net/echo.php" name="result_frame" width="100%" height="300">Your browser doesn't support iframe.</iframe>
+				</td>
+			</tr>
+		</table>
+	</body>
+</html>
