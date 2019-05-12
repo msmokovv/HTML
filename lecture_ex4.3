@@ -1,0 +1,27 @@
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>FE1 Ex4 Pld</title>
+</head>
+<body>
+	<p>Hello</p>
+	<form action="http://enevsoft.net/echo.php" method="post" enctype="multipart/form-data">
+		<input type="text" name="test1" required="required" placeholder="Въведи число" value="" />
+		<br /><br />
+		<input type="text" name="test2" />
+		<br /><br />
+		<input type="password" name="pass" />
+		<br /><br />
+		<input type="file" name="file" />
+		<br /><br />
+		<input type="checkbox" name="lang[bg]" checked="checked" /> BG
+		<input type="checkbox" name="lang[en]" value="eng" /> EN
+		<br /><br />
+		<label><input type="radio" name="sex" value="m" /> Male</label>
+		<input type="radio" name="sex" value="f" /> Female
+		<input type="radio" checked="checked" name="sex" value="u" /> unknown
+		<br /><br />
+		<input type="submit" /><input type="reset" />
+	</form>
+</body>
+</html>
