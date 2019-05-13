@@ -1,0 +1,49 @@
+<html>
+<head>
+	<meta charset="UTF-8" />
+	<title>FE1 JS1 Ex6</title>
+</head>
+<body>
+	<input type="text" id="inputName" value="Vasko" />
+	<input type="number" id="age" value="34" />
+	<input type="button" value="Run" onclick="showMyAge();" />
+	<div style="border:1px solid black;" id="resultDiv"></div>
+	
+	<script>
+		function showMyAge() {
+			var inputName = document.getElementById("inputName").value;
+			console.log(inputName);
+
+			var inputAge = document.getElementById("age").value;
+			console.log(inputAge);
+
+			var currentYear = prompt("Enter Current Year", 2017);
+			console.log(currentYear);
+
+			
+			if(currentYear != null){
+				if(!isNaN(currentYear)){
+					var boldName = confirm("Bold name?");
+					console.log(boldName);
+
+					var result = "";
+
+					if(boldName == true){
+						result = '<b>' + inputName + '</b>';
+					}else{
+						result = inputName;
+					}
+
+					result = result + ', Born: ' + (currentYear - inputAge);
+					document.getElementById('resultDiv').innerHTML = result;	
+				}else{
+					alert('currentYear must be valid integer!');
+				}
+					
+			}else{
+				alert('You must enter currentYear!');
+			}
+		}
+	</script>
+</body>
+</html>
