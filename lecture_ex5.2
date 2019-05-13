@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>lecture 5</title>
+	</head>
+	<body>
+		<form action="http://www.enevsoft.net/echo.php" method="get" name="carform" target="result">
+			<table border="1" width="90%" align="center">
+				<tr>
+					<td width="15%">Brand:</td>
+					<td width="40%">
+						<select name="Brand">
+							<option value="0" disabled="disabled" selected="selected">please select</option>
+							<option value="AUDI">AUDI</option>
+							<option value="BMW">BMW</option>
+							<option value="Mercedes">Mercedes</option>
+						</select>
+					</td>
+					<td rowspan="7">
+						<img src="https://preview.netcarshow.com/Audi-RS4_Avant-2018-1600-02.jpg" width="100%" alt="Audi-RS4_Avant-2018">
+					</td>
+				</tr>
+				<tr>
+					<td>Country:</td>
+					<td>
+						<select name="country[]" size="3" multiple="multiple">
+							<optgroup label="EUROPE">
+								<option value="bulgaria">Bulgaria</option>
+								<option value="germany">Germany</option>
+								<option value="italy">Italy</option>
+								<option value="france">France</option>
+							</optgroup>
+							<optgroup label="ASIA">
+								<option value="china">China</option>
+								<option value="japan">Japan</option>
+								<option value="india">India</option>
+								<option value="korea">Korea</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Car model:</td>
+					<td>
+						<input name="model" list="model">
+						<datalist id="model">
+							<option>A4</option>
+							<option value="M5">
+							<option>CLS</option>
+						</datalist>
+					</td>
+				</tr>
+				<tr>
+					<td>Color:</td>
+					<td>
+						<input type="color" name="color" value="silver" />
+					</td>
+				</tr
+				<tr>
+					<td>Volan:</td>
+					<td>
+						<input type="radio" name="volan" value="Left" id="left" />
+						<label for="left">Left</label>
+						<input type="radio" name="volan" value="right" id="right" />
+						<label for="right">Right</label>
+					</td>
+				</tr>
+				<tr>
+					<td>Price:</td>
+					<td>
+						<input type="range" name="price" min="3000" max="15000" step="1000" />15000
+					</td>
+				</tr>
+				<tr>
+					<td>More information:</td>
+					<td>
+						<textarea maxlength="10" rows="10" cols="40" placeholder="Your text" name="more"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="3">
+						<input type="reset" />
+						<input type="submit" style="float: right;" />
+					</td>
+				</tr>
+			</table>
+		</form><br /><br />
+		<div align="center"><iframe name="result" width="90%" height="400"></iframe></div>
+	</body>
+</html>
