@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>FE1 JS Ex5</title>
+</head>
+<body>
+	<input type="text" id="nameId" value="Vasil" />
+	<input type="number" id="ageId" value="34" />
+	<input type="button" value="Run" onclick="calculateBirthYear();" />
+	<div id="resultDiv" style="border: 1px solid black;">
+		<!-- <br />Test<br />
+		<div> test2 </div> -->
+	</div>
+
+	<script>
+		console.log(document.getElementById('resultDiv').innerHTML);
+		
+		function calculateBirthYear() {
+
+			var name = document.getElementById('nameId').value;
+			// console.log('Name: ' + name);
+
+			var age = document.getElementById('ageId').value;
+			// console.log('Age: ' + age);
+
+			
+			var currentYear = prompt('Current year ?:', '2017');
+			// console.log('Year: ' + currentYear);
+			
+
+			if (currentYear < 2016 || currentYear > 2050) {
+
+				alert('Wrong year!');
+
+
+			} else {
+				var boldName = confirm('Bold name ?');
+				// console.log('Is it bold ? ' + boldName);
+				var bornYear = currentYear - age;
+				// console.log('Person is ' + bornYear + ' year old');
+
+				if (boldName != false) {
+					document.getElementById('resultDiv').innerHTML = '<b>' + name + '</b> , Born: ' + bornYear ;
+				} else {
+					document.getElementById('resultDiv').innerHTML = name + ' , Born: ' + bornYear;
+				}
+			}
+		}
+	</script>
+
+</body>
+</html>
