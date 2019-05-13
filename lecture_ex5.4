@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FE1 Ex5</title>
+</head>
+<body>
+	<form action="http://enevsoft.net/echo.php">
+		<fieldset>
+			<legend>Personal Info:</legend>
+			<table>
+				<tr>
+					<td><label for="test">Name:</label></td>
+					<td><input type="text" id="test" placeholder="Въведи име:" name="test" /></td>
+				</tr>
+				<tr>
+					<td>Age:</td>
+					<td><input type="number" name="age" min="10" max="100" step="5" /></td>
+				</tr>
+				<tr>
+					<td>Eye color:</td>
+					<td><input type="color" name="eye_color" value="#800000" /></td>
+				</tr>
+				<tr>
+					<td>Sex:</td>
+					<td>
+						<select name="sex[]">
+							<optgroup label="Humans">
+								<option value="male">Male</option>
+								<option value="female">Female</option>
+							</optgroup>
+							<optgroup label="Others">
+								<option value="alien">Alien</option>
+							</optgroup>
+						</select>
+					</td>
+				</tr>
+				<tr>
+					<td>Number:</td>
+					<td>
+						<input id="range" type="range" min="0" max="100" onchange="changeSpan()" />&nbsp;
+						<span id="numb">0</span>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<textarea name="textarea" placeholder="Just some text ...." cols="30" rows="10"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<td>Test</td>
+					<td>
+						<input list="browsers_list" name="browsertest"/>
+						<datalist id="browsers_list">
+						    <option value="Front End Level 1"></option>
+						    <option value="Front End Level 2"></option>
+						    <option value="Front End Level 3"></option>
+						    <option value="PHP Level 1"></option>
+						    <option value="PHP Level 2"></option>
+						</datalist>                                    
+					</td>
+				</tr>
+			</table>
+		</fieldset>
+		<br /><br />
+		<fieldset>
+			<legend>Controls:</legend>
+			<input type="submit" name="alabala" value="Send1"/>
+			<button type="submit" name="alabala2" value="test2">
+				<img src="1.jpg" alt="send" width="100" height="30" />
+			</button>
+			<input type="reset" />
+		</fieldset>
+	</form>
+	<script>
+		function changeSpan() {
+			document.getElementById('numb').innerHTML = document.getElementById('range').value;
+		}
+	</script>
+</body>
+</html>
